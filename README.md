@@ -1,0 +1,1 @@
+# JS codetrain class assignment
