@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+    <h1 id="heading1">Initial Heading</h1>
+    <p id="paragraph1">Initial Paragraph</p>
+    
+    <h2 id="heading2">Another Heading</h2>
+    <p id="paragraph2">Another Paragraph</p>
+
+    <button id="changeTextButton">Change Text</button>
+    <button id="resetTextButton">Reset Text</button>
+
+    <script>
+        // Get references to elements using the getElementById method
+        const heading1 = document.getElementById('heading1');
+        const paragraph1 = document.getElementById('paragraph1');
+        const heading2 = document.getElementById('heading2');
+        const paragraph2 = document.getElementById('paragraph2');
+
+        // Get references to the buttons
+        const changeTextButton = document.getElementById('changeTextButton');
+        const resetTextButton = document.getElementById('resetTextButton');
+
+        // Function to change text
+        function changeText() {
+            heading1.textContent = 'New Heading';
+            paragraph1.textContent = 'New Paragraph';
+
+            heading2.textContent = 'Updated Heading';
+            paragraph2.textContent = 'Updated Paragraph';
+        }
+
+        // Function to reset text
+        function resetText() {
+            heading1.textContent = 'Initial Heading';
+            paragraph1.textContent = 'Initial Paragraph';
+
+            heading2.textContent = 'Another Heading';
+            paragraph2.textContent = 'Another Paragraph';
+        }
+
+        // Add click event listeners to the buttons
+        changeTextButton.addEventListener('click', changeText);
+        resetTextButton.addEventListener('click', resetText);
+    </script>
+</body>
+</html>
